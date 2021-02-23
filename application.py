@@ -17,4 +17,5 @@ if __name__ == '__main__':
         )
     except ValueError:
         pass
-    application.run(debug = True, host='0.0.0.0', threaded=True)
+    port = int(os.environ.get('PORT', 5000))
+    application.run(debug = True, host='0.0.0.0', threaded=True,port=port)
