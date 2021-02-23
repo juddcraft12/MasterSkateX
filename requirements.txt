@@ -28,3 +28,4 @@ WTForms==2.1
 Flask-SSLify
 flask_mail
 flask-compress
+gunicorn
