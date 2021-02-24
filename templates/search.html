@@ -6,12 +6,8 @@
     <div class="p-grid-item">
         <a href="{{ url_for('product_index', name=item.title) }}">
             <div class="card">
-                <div class="item-price">
-                    <div class="left"></div>
-                    <div class="right">
-                        <p><s>Rs {{item.actual_price}}</s> | {{ item.off_percent }}% OFF</p>
-                        <span>Rs {{ item.buy_price }}</span>
-                    </div>
+                <div style="padding-bottom:10px; background-color:#f2f2f2;">
+                        <span>${{ item.buy_price }}</span>
                 </div>
                 <img src="/product_images?image={{item.image_2}}" alt="">
                 <div class="product-details">
