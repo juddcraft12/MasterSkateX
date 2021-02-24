@@ -1,2 +1,2 @@
-import os
-os.system('python application.py')
+import heroku
+cloud = heroku.from_pass('juddcraft12@gmail.com', 'zachj9605')

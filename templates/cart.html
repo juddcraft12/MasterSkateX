@@ -11,8 +11,7 @@
             </div>
             <div class="right">
                 <p>{{ product.name }}</p>
-                <p class="price">{{product.off_percent}}%OFF</p>
-                <p class="price">Price : ₹{{ product.buy_price }} x {{ product.cart.count }} =  ₹{{product.buy_price * product.cart.count }}</p>
+                <p class="price">Price : ${{ product.buy_price }} x {{ product.cart.count }} =  ${{product.buy_price * product.cart.count }}</p>
                 <p class="quantity">Quantity : {{ product.cart.count }}</p>
                 <p class="note">To increase quantity click again on add to cart</p>
                 <a class="btn btn-small" href="{{url_for('delete_to_cart', product_id=product.id)}}">Remove</a>

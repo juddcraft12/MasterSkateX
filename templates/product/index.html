@@ -30,11 +30,7 @@
         </div>
         <div class="right">
             <h1 class="p-title">{{product.name}}</h1>
-            <p class="cross-price">MRP
-                <s>Rs. {{product.actual_price}}</s>
-            </p>
-            <p class="sell-price">Rs. {{ (product.buy_price) }}
-                <span>{{ product.off_percent }}% OFF</span>
+            <p class="sell-price">${{ (product.buy_price) }}
                 <span class="count">
                     {% if product.count >= 1 %}
                         Available
@@ -45,23 +41,23 @@
             </p>
             {% if product.color %}
                 <p class="text">
-                <span class="list-circle"></span>Color : {{product.color}}</p>
+                <span class="list-circle"></span>Color: {{product.color}}</p>
             {% endif %}
             {% if product.size %}
             <p class="text">
-                <span class="list-circle"></span>Size : {{product.size}}</p>
+                <span class="list-circle"></span>Style: {{product.size}}</p>
             {% endif %}
             {% if product.brand_name %}
                 <p class="text">
-                    <span class="list-circle"></span>Brand Name : {{product.brand_name}}</p>
+                    <span class="list-circle"></span>Brand Name: {{product.brand_name}}</p>
             {% endif %}
             {% if product.brand_name %}
                 <p class="text">
-                    <span class="list-circle"></span>Lense Color : {{product.lenses_color}}</p>
+                    <span class="list-circle"></span>Main Color: {{product.lenses_color}}</p>
             {% endif %}
             {% if product.brand_name %}
                 <p class="text">
-                    <span class="list-circle"></span>Frame Color : {{product.frame_color}}</p>
+                    <span class="list-circle"></span>Highlight Color: {{product.frame_color}}</p>
             {% endif %}
             <!-- {% if product.other_details %}
             <p class="text other-details">{{ product.other_details}}</p>
@@ -89,52 +85,28 @@
                 {% endif %}
                 {% if product.lenses_color %}
                 <tr>
-                    <td>Lense Color:</td>
+                    <td>Main Color:</td>
                     <td>{{product.lenses_color}}</td>
                 </tr>
                 {% endif %}
                 {% if product.frame_color %}
                 <tr>
-                    <td>Frame Color:</td>
+                    <td>Highlight Color:</td>
                     <td>{{product.frame_color}}</td>
                 </tr>
                 {% endif %}
                 {% if product.lenses_material %}
                 <tr>
-                    <td>Lense Material:</td>
+                    <td>Deck Material:</td>
                     <td>{{product.lenses_material}}</td>
-                </tr>
-                {% endif %}
-                {% if product.frame_material %}
-                <tr>
-                    <td>Frame Material:</td>
-                    <td>{{product.frame_material}}</td>
-                </tr>
-                {% endif %}
-                {% if product.ideal_for %}
-                <tr>
-                    <td>Ideal For:</td>
-                    <td>{{product.ideal_for}}</td>
                 </tr>
                 {% endif %}
             </table>
             <table>
-                {% if product.usage %}
-                <tr>
-                    <td>Usage:</td>
-                    <td>{{product.usage}}</td>
-                </tr>
-                {% endif %}
                 {% if product.packaging %}
                 <tr>
-                    <td>Packaging:</td>
+                    <td>Shipping:</td>
                     <td>{{product.packaging}}</td>
-                </tr>
-                {% endif %}
-                {% if product.uv_protection %}
-                <tr>
-                    <td>UV Protection:</td>
-                    <td>{{product.uv_protection}}</td>
                 </tr>
                 {% endif %}
                 {% if product.model_no %}
@@ -151,46 +123,22 @@
                 {% endif %}
                 {% if product.size %}
                 <tr>
-                    <td>Size:</td>
+                    <td>Style:</td>
                     <td>{{product.size}}</td>
                 </tr>
                 {% endif %}
             </table>
             <table>
-                {% if product.typ_e %}
-                <tr>
-                    <td>Type:</td>
-                    <td>{{product.typ_e}}</td>
-                </tr>
-                {% endif %}
-                {% if product.features %}
-                <tr>
-                    <td>Features:</td>
-                    <td>{{product.features}}</td>
-                </tr>
-                {% endif %}
-                {% if product.case_type %}
-                <tr>
-                    <td>Case Type:</td>
-                    <td>{{product.case_type}}</td>
-                </tr>
-                {% endif %}
                 {% if product.dimensions_bridgesize %}
                 <tr>
-                    <td>Bridge Size:</td>
+                    <td>Length:</td>
                     <td>{{product.dimensions_bridgesize}}</td>
                 </tr>
                 {% endif %}
                 {% if product.dimensions_hrizontal_width %}
                 <tr>
-                    <td>Horizontal Width:</td>
+                    <td>Width:</td>
                     <td>{{product.dimensions_hrizontal_width}}</td>
-                </tr>
-                {% endif %}
-                {% if product.dimensions_frame_arm_lenght %}
-                <tr>
-                    <td>Arm Lenght:</td>
-                    <td>{{product.dimensions_frame_arm_lenght}}</td>
                 </tr>
                 {% endif %}
             </table>
@@ -200,15 +148,14 @@
 
 <div class="container reviews">
     <div class="card be-social">
-        <p class="bold">WEAR IT AND SHARE IT</p>
+        <p class="bold">Send us photos of you using our product!</p>
         <p class="social">
-            <a href="https://www.instagram.com/redgingger2018/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/redgingger2018" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/redgingger2018" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""Insert Social"" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""Insert Social"" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href=""Insert Social"" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         </p>
-        <p class="tag">#RedGinggerStar</p>
-        <p>Show off on Social Media. Use hash tag #RedGinggerStar</p>
-        <p><a href="#">See Gallery</a></p>
+        <p class="tag">#MasterSkateX</p>
+        <p>Show off on Social Media. Use hash tag #MasterSkateX</p>
     </div>
     <div class="card review--anim">
         <form action="{{ url_for('add_comment', product_id=product.id) }}" method="POST" class="add-review">
