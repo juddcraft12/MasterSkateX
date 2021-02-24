@@ -1,7 +1,7 @@
 import datetime
 
 from flask_bcrypt import generate_password_hash
-from flask_login import UserMixin
+from flask_login import LoginManager, login_user, login_required, current_user, logout_user, UserMixin
 from peewee import *
 from playhouse.migrate import SqliteMigrator
 import uuid
@@ -152,10 +152,10 @@ class Cart(Model):
         database = DATABASE
 
     @classmethod
-    def add_product(cls, user_email_id, product_id, count=1):
+    def add_product(cls, user_email, product_id, count=1):
         try:
             cls.create(
-                user_email_id=user_email_id,
+                user_email=current_user.id,
                 product_id=product_id,
                 count=count
             )
@@ -167,7 +167,7 @@ class Cart(Model):
 class BuyHistory(Model):
     """Item Buying History"""
     order_id = CharField(max_length=50, unique=True)
-    product_id = ForeignKeyField(Product, related_name='product')
+    product = ForeignKeyField(Product, related_name='product')
     buyer = ForeignKeyField(User, related_name='customer')
     product_name = CharField()
     buyer_name = CharField()
@@ -190,7 +190,7 @@ class BuyHistory(Model):
         cls.create(
             order_id = str(uuid.uuid4()),
             buyer = buyer,
-            product_id = product_id,
+            product = product_id,
             product_name = product_name,
             product_quantity = product_quantity,
             buyer_name = buyer_name,

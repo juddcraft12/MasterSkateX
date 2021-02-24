@@ -193,6 +193,18 @@ itsdangerous = "*"
 
 [[package]]
 category = "main"
+description = "Heroku API Wrapper."
+name = "heroku"
+optional = false
+python-versions = "*"
+version = "0.1.4"
+
+[package.dependencies]
+python-dateutil = "1.5"
+requests = ">=1.0.0"
+
+[[package]]
+category = "main"
 description = "Internationalized Domain Names in Applications (IDNA)"
 name = "idna"
 optional = false
@@ -247,6 +259,26 @@ version = "2.20"
 
 [[package]]
 category = "main"
+description = "Extensions to the standard python 2.3+ datetime module"
+name = "python-dateutil"
+optional = false
+python-versions = "*"
+version = "1.5"
+
+[[package]]
+category = "main"
+description = "Python HTTP for Humans."
+name = "requests"
+optional = false
+python-versions = "*"
+version = "2.15.1"
+
+[package.extras]
+security = ["cryptography (>=1.3.4)", "idna (>=2.0.0)", "pyOpenSSL (>=0.14)"]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)", "win-inet-pton"]
+
+[[package]]
+category = "main"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
 optional = false
@@ -282,7 +314,7 @@ ipaddress = ["ipaddress"]
 locale = ["Babel (>=1.3)"]
 
 [metadata]
-content-hash = "a439ae2e558a549c0c9b965368de51b247e9241925ca7fadff2c69369ceae149"
+content-hash = "389c06df818d32a92a546549a3a0b67d8eec208eaacf59e74cc3384f204abcca"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -414,6 +446,9 @@ flask-wtf = [
     {file = "Flask-WTF-0.14.3.tar.gz", hash = "sha256:d417e3a0008b5ba583da1763e4db0f55a1269d9dd91dcc3eb3c026d3c5dbd720"},
     {file = "Flask_WTF-0.14.3-py2.py3-none-any.whl", hash = "sha256:57b3faf6fe5d6168bda0c36b0df1d05770f8e205e18332d0376ddb954d17aef2"},
 ]
+heroku = [
+    {file = "heroku-0.1.4.tar.gz", hash = "sha256:cbeba42b628bc38504d49ace86b8c1729ab2156e530fb1823954988932c8f7fb"},
+]
 idna = [
     {file = "idna-3.1-py3-none-any.whl", hash = "sha256:5205d03e7bcbb919cc9c19885f9920d622ca52448306f2377daede5cf3faac16"},
     {file = "idna-3.1.tar.gz", hash = "sha256:c5b02147e01ea9920e6b0a3f1f7bb833612d507592c837a6c49552768f4054e1"},
@@ -486,6 +521,13 @@ peewee = [
 pycparser = [
     {file = "pycparser-2.20-py2.py3-none-any.whl", hash = "sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"},
     {file = "pycparser-2.20.tar.gz", hash = "sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0"},
+]
+python-dateutil = [
+    {file = "python-dateutil-1.5.tar.gz", hash = "sha256:6f197348b46fb8cdf9f3fcfc2a7d5a97da95db3e2e8667cf657216274fe1b009"},
+]
+requests = [
+    {file = "requests-2.15.1-py2.py3-none-any.whl", hash = "sha256:ff753b2196cd18b1bbeddc9dcd5c864056599f7a7d9a4fb5677e723efa2b7fb9"},
+    {file = "requests-2.15.1.tar.gz", hash = "sha256:e5659b9315a0610505e050bb7190bf6fa2ccee1ac295f2b760ef9d8a03ebbb2e"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},

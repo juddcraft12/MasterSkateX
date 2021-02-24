@@ -364,30 +364,18 @@ def dashboard_products_edit(id):
                 image_1 = filename1,
                 image_2 = filename2,
                 image_3 = filename3,
-                actual_price=form.actual_price.data,
-                off_percent=form.off_percent.data,
                 buy_price=form.buy_price.data,
-                style= form.style.data,
                 lenses_color = form.lenses_color.data,
                 frame_color = form.frame_color.data,
                 brand_name = form.brand_name.data,
                 lenses_material = form.lenses_material.data,
-                frame_material = form.frame_material.data,
-                usage = form.usage.data,
+                frame_material = form.frame_material,
                 packaging = form.packaging.data,
-                uv_protection = form.uv_protection.data,
                 model_no = form.model_no.data,
                 suitable_for = form.suitable_for.data,
                 size = form.size.data,
-                ideal_for = form.ideal_for.data,
-                typ_e = form.typ_e.data,
-                features = form.features.data,
-                case_type = form.case_type.data,
                 dimensions_bridgesize = form.dimensions_bridgesize.data,
                 dimensions_hrizontal_width = form.dimensions_hrizontal_width.data,
-                dimensions_frame_arm_lenght = form.dimensions_frame_arm_lenght.data,
-                weight = form.weight.data,
-                other_details = form.other_details.data
             ).where(models.Product.id == id)
             q.execute()
         return render_template('dashboard/html/product/edit.html', user=current_user, form=form, item=product)
@@ -502,7 +490,7 @@ def buy_now(product_id):
     except models.Cart.DoesNotExist:
         print('2')
         models.Cart.add_product(
-            user_email_id= current_user.id,
+            user_email= current_user.id,
             product_id= product_id,
             count = 1
         )

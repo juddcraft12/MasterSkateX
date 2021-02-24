@@ -41,30 +41,30 @@ class new_product_form(FlaskForm):
     image_2 = FileField('Medium Image', validators=[FileRequired(), FileAllowed(images, 'Images only!')])
     image_3 = FileField('Large Image', validators=[FileRequired(), FileAllowed(images, 'Images only!')])
     count = IntegerField('Product Count', validators=[DataRequired()])
-    actual_price = IntegerField('Product Price')
-    off_percent = IntegerField('Off Percent %')
+    actual_price = 0
+    off_percent = 0
     buy_price = IntegerField('Buy Price')
-    style = StringField('Style')
-    lenses_color = StringField('Lenses Color')
-    frame_color = StringField('Frame Color')
+    style = "null"
+    lenses_color = StringField('Main Color')
+    frame_color = StringField('Highlight Color')
     brand_name = StringField('Brand Name')
-    lenses_material = StringField('Lenses Material')
-    frame_material = StringField('Frame Material')
-    usage = StringField('Usage')
-    packaging = StringField('Packaging')
-    uv_protection = StringField('UV Protection')
+    lenses_material = StringField('Deck Material')
+    frame_material = "null"
+    usage = "null"
+    packaging = StringField('Shipping')
+    uv_protection = "null"
     model_no = StringField('Model No.')
     suitable_for = StringField('Suitable For')
-    size = StringField('Size')
-    ideal_for = StringField('Ideal For')
-    typ_e = StringField('Type')
-    features = StringField('Features')
-    case_type = StringField('Case Type')
-    dimensions_bridgesize = StringField('Bridge Size (dimensions)')
-    dimensions_hrizontal_width = StringField('Horizontal Width (dimensions)')
-    dimensions_frame_arm_lenght = StringField('Frame Arm Lenghth (dimensions)')
-    weight = StringField('Weight')
-    other_details = TextAreaField('Other Details')
+    size = StringField('Style')
+    ideal_for = "null"
+    typ_e = "null"
+    features = "null"
+    case_type = "null"
+    dimensions_bridgesize = StringField('Length (dimensions)')
+    dimensions_hrizontal_width = StringField('Width (dimensions)')
+    dimensions_frame_arm_lenght = "null"
+    weight = "null"
+    other_details = "null"
 
 class edit_product_form(FlaskForm):
     name = StringField('Product Name', validators=[DataRequired()])
@@ -72,30 +72,30 @@ class edit_product_form(FlaskForm):
     image_2 = FileField('Medium Image', validators=[FileAllowed(images, 'Images only!')])
     image_3 = FileField('Large Image', validators=[FileAllowed(images, 'Images only!')])
     count = IntegerField('Product Count', validators=[DataRequired()])
-    actual_price = IntegerField('Product Price')
-    off_percent = IntegerField('Off Percent %')
+    actual_price = "0"
+    off_percent = "0"
     buy_price = IntegerField('Buy Price')
-    style = StringField('Style')
-    lenses_color = StringField('Lenses Color')
-    frame_color = StringField('Frame Color')
+    style = "null"
+    lenses_color = StringField('Main Color')
+    frame_color = StringField('Highlight Color')
     brand_name = StringField('Brand Name')
-    lenses_material = StringField('Lenses Material')
-    frame_material = StringField('Frame Material')
-    usage = StringField('Usage')
-    packaging = StringField('Packaging')
-    uv_protection = StringField('UV Protection')
+    lenses_material = StringField('Deck Material')
+    frame_material = "null"
+    usage = "null"
+    packaging = StringField('Shipping')
+    uv_protection = "null"
     model_no = StringField('Model No.')
     suitable_for = StringField('Suitable For')
-    size = StringField('Size')
-    ideal_for = StringField('Ideal For')
-    typ_e = StringField('Type')
-    features = StringField('Features')
-    case_type = StringField('Case Type')
-    dimensions_bridgesize = StringField('Bridge Size (dimensions)')
-    dimensions_hrizontal_width = StringField('Horizontal Width (dimensions)')
-    dimensions_frame_arm_lenght = StringField('Frame Arm Lenghth (dimensions)')
-    weight = StringField('Weight')
-    other_details = TextAreaField('Other Details')
+    size = StringField('Style')
+    ideal_for = "null"
+    typ_e = "null"
+    features = "null"
+    case_type = "null"
+    dimensions_bridgesize = StringField('Length (dimensions)')
+    dimensions_hrizontal_width = StringField('Width (dimensions)')
+    dimensions_frame_arm_lenght = "null"
+    weight = "null"
+    other_details = "null"
 
 
 class Checkout_form(FlaskForm):
