@@ -76,8 +76,8 @@ def load_user(userid):
 def before_request():
     """Connet to the database before each request."""
     try:
-        g.db = models.DATABASE
-        g.db.connect()
+     g.db = models.DATABASE
+     g.db.connect()
     except models.OperationalError:
         pass
 
@@ -531,7 +531,7 @@ def add_to_cart(product_id):
     except models.Cart.DoesNotExist:
         print('2')
         models.Cart.add_product(
-            user_email_id= current_user.id,
+            user_email= current_user.id,
             product_id_id= product_id,
             count = 1
         )
