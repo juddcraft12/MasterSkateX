@@ -145,18 +145,18 @@ class Comment(Model):
 
 class Cart(Model):
     user_email = ForeignKeyField(User, related_name='carts')
-    product_id = ForeignKeyField(Product, related_name='products')
+    product = ForeignKeyField(Product, related_name='products')
     count = IntegerField()
     
     class Meta:
         database = DATABASE
 
     @classmethod
-    def add_product(cls, user_email_id, product_id_id, count=1):
+    def add_product(cls, user_email_id, product_id, count=1):
         try:
             cls.create(
                 user_email_id=user_email_id,
-                product_id_id=product_id_id,
+                product_id=product_id,
                 count=count
             )
         except IntegrityError:

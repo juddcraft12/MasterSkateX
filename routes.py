@@ -503,7 +503,7 @@ def buy_now(product_id):
         print('2')
         models.Cart.add_product(
             user_email_id= current_user.id,
-            product_id_id= product_id,
+            product_id= product_id,
             count = 1
         )
     return redirect(url_for('checkout'))
@@ -523,16 +523,16 @@ def delete_to_cart(product_id):
 @login_required
 def add_to_cart(product_id):
     try:
-        if models.Cart.get((models.Cart.user_email == current_user.id) & (models.Cart.product_id == product_id)):
+        if models.Cart.get((models.Cart.user_email == current_user.id) & (models.Cart.product == product_id)):
             print('1')
-            prod = models.Cart.get((models.Cart.user_email == current_user.id) & (models.Cart.product_id == product_id))
-            q = models.Cart.update(count = prod.count + 1).where((models.Cart.user_email == current_user.id) & (models.Cart.product_id == product_id))
+            prod = models.Cart.get((models.Cart.user_email == current_user.id) & (models.Cart.product == product_id))
+            q = models.Cart.update(count = prod.count + 1).where((models.Cart.user_email == current_user.id) & (models.Cart.product == product_id))
             q.execute()
     except models.Cart.DoesNotExist:
         print('2')
         models.Cart.add_product(
             user_email= current_user.id,
-            product_id_id= product_id,
+            product_id= product_id,
             count = 1
         )
 
