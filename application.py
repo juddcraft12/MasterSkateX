@@ -9,11 +9,11 @@ if __name__ == '__main__':
     models.initialize()
     try:
         models.User.create_user(
-            full_name='ZachariahJudd',
-            email='juddcraft12@gmail.com',
-            password='Zachj9605!',
-            mobile_no='8644693128',
-            admin=True
+            full_name='{First_name_Last_name}',
+            email='{Email}',
+            password='{Password}',
+            mobile_no='{Mobile Number}',
+            admin=True #This is gonna be your admin account so keep this as true
         )
     except ValueError:
         pass
